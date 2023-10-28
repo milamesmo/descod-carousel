@@ -9,7 +9,7 @@
   position:absolute;
   left:0;
   top:0;
-  opacity:0;
+  opacity:0%;
   width:100%;
   height:100%;
   transition:all 0.5s ease-in-out;
@@ -51,4 +51,16 @@
   color:#ffffff;
   font-size: 40px;
   cursor: pointer;
+}
+
+.c-carousel-indicator-li{
+  position:relative;
+  display:inline-block;
+  height:auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index:3;
+  cursor:pointer;
+  transition:all 0.3s ease-in-out;
 }
