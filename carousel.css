@@ -1,45 +1,54 @@
-/* just for jsfiddle */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+.c-carousel{
+  height:60vh;
+  width:100%;
+  position:relative;
+  display:flex;
 }
 
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale;
+.c-carousel-item{
+  position:absolute;
+  left:0;
+  top:0;
+  opacity:0;
+  width:100%;
+  height:100%;
+  transition:all 0.5s ease-in-out;
 }
 
-.middle-indicator{
-   position:absolute;
-   top:50%;
-   }
-  .middle-indicator-text{
-   font-size: 4.2rem;
-  }
-  a.middle-indicator-text{
-    color:white !important;
-  }
-.content-indicator{
-    width: 64px;
-    height: 64px;
-    background: none;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px; 
-  }
-    .indicators{
-  	visibility: hidden;
-  }
+.c-carousel-item.active{
+  opacity:1;
+}
+.c-carousel-item img{
+  position:relative;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.c-carousel-control-prev{
+  position:absolute;
+  width:auto;
+  padding:0 40px;
+  height:100%;
+  left:50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:#e2e2e2;
+  font-size: 40px;
+  cursor: pointer;
+}
+.c-carousel-control-next{
+  position:absolute;
+  width:auto;
+  padding:0 40px;
+  height:100%;
+  right:50px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:#ffffff;
+  font-size: 40px;
+  cursor: pointer;
+}
